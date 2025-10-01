@@ -1,3 +1,4 @@
+#![cfg(not(feature = "nixos"))]
 use cosmic::{
     Element, Task,
     cosmic_config::{self, ConfigSet},

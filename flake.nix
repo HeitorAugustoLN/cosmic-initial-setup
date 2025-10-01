@@ -60,6 +60,8 @@
                 fileset = lib.fileset.gitTracked ./.;
               };
 
+              patches = [];
+
               cargoBuildFeatures = [ "nixos" ];
             };
           };

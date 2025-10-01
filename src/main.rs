@@ -194,6 +194,7 @@ impl Application for App {
                         }
                     }
 
+                    #[cfg(not(feature = "nixos"))]
                     page::Message::Language(message) => {
                         if let Some(page) =
                             self.pages.get_mut(&TypeId::of::<page::language::Page>())
@@ -221,6 +222,7 @@ impl Application for App {
                         }
                     }
 
+                    #[cfg(not(feature = "nixos"))]
                     page::Message::Location(message) => {
                         if let Some(page) =
                             self.pages.get_mut(&TypeId::of::<page::location::Page>())

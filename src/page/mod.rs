@@ -95,8 +95,10 @@ pub fn pages(mode: AppMode) -> IndexMap<TypeId, Box<dyn Page>> {
 pub enum Message {
     Appearance(appearance::Message),
     Keyboard(keyboard::Message),
+    #[cfg(not(feature = "nixos"))]
     Language(language::Message),
     Layout(layout::Message),
+    #[cfg(not(feature = "nixos"))]
     Location(location::Message),
     SetTheme(cosmic::Theme),
     User(user::Message),

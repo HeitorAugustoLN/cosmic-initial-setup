@@ -1,3 +1,4 @@
+#![cfg(not(feature = "nixos"))]
 use crate::fl;
 use crate::page;
 use cosmic::{Element, Task, cosmic_theme, iced::Alignment, theme, widget};
